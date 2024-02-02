@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0C1142;
+    --secondary-color: #FFFFC8;
+    --third-color: #2BD4DB;
+}
+
+html {
+  padding: 1rem;
+  /* background-color: #fff; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+#payment-form {
+  max-width: 46rem;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  height: 10px;
+  color: #13395e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 10px;
+  margin: 8px 0;
+}
+
+.date-and-code {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.date-and-code > div:nth-child(1) {
+  width: 55.715%;
+}
+.date-and-code > div:nth-child(2) {
+  width: 45.719%;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  height: 40px;
+}
+.icon-container:last-child {
+  right: 0;
+}
+.icon-container.payment-method {
+  right: 0;
+}
+
+.input-container.card-number {
+  margin-bottom: 8px;
+}
+.input-container.expiry-date {
+  margin-right: 8px;
+}
+
+div + button {
+  margin-top: 8px;
+}
+
+.icon-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 26px;
+  margin: 0 7px;
+}
+.icon-container img {
+    width: 20px;
+}
+
+.icon-container.payment-method {
+  transform: translateY(-50%) rotateY(90deg);
+  transition: opacity 0.15s ease-out;
+  opacity: 0;
+  top: 50%;
+}
+
+.icon-container.payment-method.show {
+  opacity: 1;
+  transition: all 0.4s ease-out;
+  transform: translateY(-50%) rotateY(0deg);
+}
+
+.icon-container.payment-method img {
+  width: 100%;
+}
+
+[id$="-error"] {
+  display: none;
+}
+
+.frame {
+  opacity: 0;
+}
+
+
+.error-message {
+  display: block;
+  color: #c9501c;
+  font-size: 1.5rem;
+  margin: 8px 0 0 1px;
+  font-weight: 300;
+}
+
+.success-payment-message {
+  color: #13395e;
+  line-height: 1.4;
+}
+.token {
+  color: #b35e14;
+  font-size: 1em;
+  font-family: monospace;
+}
+
+/**
+IE11-targeted optimisations
+ */
+_:-ms-fullscreen,
+:root .icon-container {
+  display: block;
+}
+
+_:-ms-fullscreen,
+:root .icon-container img {
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  position: absolute;
+}
+
+_:-ms-fullscreen,
+#icon-card-number,
+_:-ms-fullscreen,
+#icon-expiry-date,
+_:-ms-fullscreen,
+#icon-cvv {
+  left: 7px;
+}
+
+#checkout-frames-card-number::-ms-clear {
+  display: none;
+}
+
+
+#checkout-frames-radio-selector {
+  border-radius: 12px !important;
+  padding-right: 4px !important;
+}
+
+.checkout-frames-scheme-choice-radio-wrapper {
+  padding-right: 4px !important;
+}
+
+#checkout-frames-scheme-choice-radio-wrapper {
+  padding-right: 4px !important;
+}

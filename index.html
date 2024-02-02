@@ -1,0 +1,77 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Components - Demo</title>
+  <link rel="stylesheet" href="styleCKO.css" />
+  <link rel="stylesheet" href="style.css" /> 
+  <link rel="shortcut icon" href="https://www.checkout.com/docs/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.checkout.com/docs/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.checkout.com/docs/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.checkout.com/docs/favicons/favicon-16x16.png" />
+  <link rel="mask-icon" href="https://www.checkout.com/docs/favicons/favicon.32.safari.svg" color="#00122C" />
+  <link rel="shortcut icon" href="https://www.checkout.com/docs/favicons/favicon.ico" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+  
+  <script>
+      Weglot.initialize({
+          api_key: 'wg_a45a63067d81d15fb6354cd4fd4af82b1'
+      });
+  </script>
+</head>
+
+<body>
+  <div id="content" class="content">
+    <div class="top-bar_wrapper">
+      <div data-animation="default" class="navbar1_component is--new w-nav" data-easing2="ease"
+        fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium"
+        data-w-id="43115ecc-6ec2-b8ec-cc98-770528a62f86" role="banner" data-duration="400"
+        style="background-color: rgba(255, 255, 255, 0);">
+        <div class="navbar1_container new__main-nav"><a href="/" class="brand w-nav-brand">
+            <img id="logo" src="images/Checkout.com Logo — Navy — RGB.png" alt="Logo Checkout" width="260px" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Checkout.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#" onclick="paymentComponents()">Payment Components</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="curved"></section>
+
+    <div id="paymentComponents" class="paymentComponents" style="text-align: center;">
+      <form id="payment-form">
+        <div class="payments-container">
+            <div id="payments"></div>
+        </div>
+        <span id="error-message"></span>
+        <span id="successful-payment-message"></span>
+      </form>
+    </div>
+  </div>
+
+  <script src="constants.js"></script>
+  <script src="/paymentComponents.js"></script>
+  <script src="https://checkout-web-components.checkout.com/index.js"></script>
+</body>
+
+</html>
