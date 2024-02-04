@@ -1,7 +1,7 @@
-//const frontUrl = "https://democko-4eb582758908.herokuapp.com";
-//const serverUrl = "https://demo-cko-backend.herokuapp.com";
-const frontUrl = 'http://127.0.0.1:1313';
-const serverUrl = "http://localhost:4000";
+const frontUrl = "https://pc-cko-front-be80e555755d.herokuapp.com";
+const serverUrl = "https://pc-cko-back-265c31cb1897.herokuapp.com";
+//const frontUrl = 'http://127.0.0.1:1313';
+//const serverUrl = "http://localhost:4000";
 const paymentEndpoint = serverUrl + "/checkout/payments";
 const paymentSessionEndpoint = serverUrl + "/checkout/payment-sessions";
 const POST = "POST";
