@@ -1,6 +1,70 @@
-createPaymentSession();
+var country = 'GB';
+var currency = 'GBP';
+var locale = 'en';
 
-async function createPaymentSession() {
+window.onload = function () {
+  createPaymentSession(country, currency, locale);
+};
+
+
+
+$("#customer-location-select").change(function () {
+  switch(this.value) {
+    case 'BE':
+      country = 'BE';
+      currency = 'EUR';
+      locale = 'en'
+      break;
+    case 'AT':
+      country = 'AT';
+      currency = 'EUR';
+      locale= 'en'
+      break;
+    case 'NL':
+      country = 'NL';
+      currency = 'EUR';
+      locale = 'nl'
+      break;
+    case 'KW':
+      country = 'KW';
+      currency = 'KWD';
+      locale = 'en';
+      break;
+    case 'PT':
+      country = 'PT';
+      currency = 'EUR';
+      locale = 'pt';
+      break;
+    case 'PL':
+      country = 'PL';
+      currency = 'EUR';
+      locale = 'en';
+      break;
+    case 'FR':
+        country = 'FR';
+        currency = 'EUR';
+        locale = 'fr';
+        break;
+    case 'ES':
+        country = 'ES';
+        currency = 'EUR';
+        locale = 'es';
+        break;
+    case 'IT':
+        country = 'IT';
+        currency = 'EUR';
+        locale = 'it';
+        break;
+    default:
+      country = 'GB';
+      currency = 'GBP';
+      locale = 'en';
+      // code block
+  }
+  createPaymentSession(country, currency, locale);
+});
+
+async function createPaymentSession(country, currency, locale) {
 
   var settings = {
     url: paymentSessionEndpoint,
@@ -12,11 +76,11 @@ async function createPaymentSession() {
     data: {
       email: buyerEmail,
       name: "Demo Checkout",
-      currency: "EUR",
+      currency: currency,
       amount: 2500,
       reference: new Date().getTime(),
-      securePayment: true,
-      country: "GB",
+      securePayment: false,
+      country: country,
       success_url: frontUrl,
       failure_url: frontUrl,
     },
@@ -27,7 +91,7 @@ async function createPaymentSession() {
     const checkoutWebComponents = await CheckoutWebComponents({
       publicKey: publicKey,
       environment: "sandbox",
-      locale: "en-GB",
+      locale: locale,
       paymentSession: response,
       onReady: () => {
         console.log("onReady");
