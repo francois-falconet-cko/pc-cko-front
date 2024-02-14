@@ -58,30 +58,31 @@
 
     <section class="curved"></section>
       <div id="parameters_container">
-        <label for="customer-location-select">Customer location</label>
-        <select name="customer-locations" id="customer-location-select">
-          <option value="AT">🇦🇹&emsp;Austria</option>
-          <option value="BE">🇧🇪&emsp;Belgium</option>
-          <option value="IT">🇮🇹&emsp;Italy</option>
-          <option value="KW">🇰🇼&emsp;Kuwait</option>
-          <option value="NL">🇳🇱&emsp;Netherlands</option>
-          <option value="PT">🇵🇹&emsp;Portugal</option>
-          <option value="FR">🇫🇷&emsp;France</option>
-          <option value="PL">🇵🇱&emsp;Poland</option>
-          <option value="ES">🇪🇸&emsp;Spain</option>
-          <option selected value="UK">🇬🇧&emsp;United Kingdom</option>
-        </select>
-      </div>
+          <label for="customer-location-select">Customer location : </label>
+          <select class="form-control" name="customer-locations" id="customer-location-select">
+            <option value="AT">🇦🇹&emsp;Austria</option>
+            <option value="BE">🇧🇪&emsp;Belgium</option>
+            <option value="IT">🇮🇹&emsp;Italy</option>
+            <option value="KW">🇰🇼&emsp;Kuwait</option>
+            <option value="NL">🇳🇱&emsp;Netherlands</option>
+            <option value="PT">🇵🇹&emsp;Portugal</option>
+            <option value="FR">🇫🇷&emsp;France</option>
+            <option value="PL">🇵🇱&emsp;Poland</option>
+            <option value="ES">🇪🇸&emsp;Spain</option>
+            <option selected value="UK">🇬🇧&emsp;United Kingdom</option>
+          </select>
+    </div>
     
 
 
     <div id="paymentComponents" class="paymentComponents" style="text-align: center;margin-top: 10px;">
       <form id="payment-form">
+        <span id="error-message"></span>
+        <div id="successful-payment-message"></div>
         <div class="payments-container">
             <div id="payments"></div>
         </div>
-        <span id="error-message"></span>
-        <span id="successful-payment-message"></span>
+        
       </form>
     </div>
   </div>

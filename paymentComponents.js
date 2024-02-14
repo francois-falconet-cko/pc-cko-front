@@ -66,6 +66,8 @@ $("#customer-location-select").change(function () {
 
 async function createPaymentSession(country, currency, locale) {
 
+  $("#successful-payment-message").hide();
+
   var settings = {
     url: paymentSessionEndpoint,
     method: "POST",
@@ -98,6 +100,7 @@ async function createPaymentSession(country, currency, locale) {
       },
       onPaymentCompleted: (component, paymentResponse) => {
         const element = document.getElementById("successful-payment-message");
+        element.setAttribute("style", "background-color: #03856a;margin-bottom: 10;border-radius: 10px;color: white;padding: 8;line-height: 1.4;font-weight: 400;");
 
         element.innerHTML = `
             ${component.name} completed <br>

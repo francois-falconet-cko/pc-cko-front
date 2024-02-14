@@ -30,7 +30,6 @@ label {
   color: #13395e;
   font-size: 14px;
   font-weight: 500;
-  line-height: 10px;
   margin: 8px 0;
 }
 
@@ -111,8 +110,17 @@ div + button {
   opacity: 0;
 }
 
+#customer-location-select {
+  width: 10%;
+  margin-left: 3;
+}
 
-.error-message {
+#parameters_container {
+  display: flex;
+  margin-top: 5;
+}
+
+#error-message {
   display: block;
   color: #c9501c;
   font-size: 1.5rem;
@@ -120,8 +128,12 @@ div + button {
   font-weight: 300;
 }
 
-.success-payment-message {
-  color: #13395e;
+#success-payment-message {
+  background-color: #03856a;
+    margin-bottom: 10;
+    border-radius: 10px;
+    color: white;
+    padding: 8;
   line-height: 1.4;
 }
 .token {
