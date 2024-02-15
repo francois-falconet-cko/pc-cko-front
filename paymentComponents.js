@@ -282,8 +282,9 @@ $("#customer-location-select").change(function () {
   createPaymentSession(country, currency, locale, theme);
 });
 
+let oldPayments;
 async function createPaymentSession(country, currency, locale, theme) {
-
+  oldPayments?.unmount();
   $("#successful-payment-message").hide();
 
   var settings = {
@@ -346,6 +347,7 @@ async function createPaymentSession(country, currency, locale, theme) {
     });
 
     const payments = checkoutWebComponents.create("payments");
+    oldPayments = payments;
     payments.mount(document.getElementById("payments"));
   });
 }
