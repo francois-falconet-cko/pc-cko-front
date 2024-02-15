@@ -273,6 +273,11 @@ $("#customer-location-select").change(function () {
         currency = 'EUR';
         locale = 'it';
         break;
+    case 'VI':
+      country = 'VI';
+      currency = 'VND';
+      locale = 'vi';
+        break;
     default:
       country = 'GB';
       currency = 'GBP';
