@@ -111,13 +111,19 @@ div + button {
 }
 
 #customer-location-select {
-  width: 10%;
+  width: 180px;
+  margin-left: 3;
+}
+
+#theme-select {
+  width: 180px;
   margin-left: 3;
 }
 
 #parameters_container {
   display: flex;
   margin-top: 5;
+  justify-content: center;
 }
 
 #error-message {
